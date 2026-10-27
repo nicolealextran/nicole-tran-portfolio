@@ -1,52 +1,44 @@
-# Nicole Tran Portfolio
+[README.md](https://github.com/user-attachments/files/34052378/README.md)
+# Nicole Tran portfolio — replacement website files
 
-A lightweight, responsive portfolio built with plain HTML, CSS, and JavaScript. No framework or build tools required.
+This is a clean, responsive static website for GitHub Pages. It includes a homepage, photography grid, featured social video cards with supplied view counts, LinkedIn links, and a separate media-kit page with a PDF download.
 
-## Files
-- `index.html` — page content and links
-- `style.css` — layout, colors, typography, responsive design
-- `script.js` — mobile navigation, photography filters, and lightbox
-- `images/` — add your own photos and social video covers here
+## Important: add your image files
+The ZIP you supplied contained only HTML, CSS, JavaScript, and README files; it did not contain the photos. The code therefore references the image filenames below. Add your real images to these folders using the exact filenames, or change the paths in `index.html`.
 
-## Preview locally
-Open `index.html` in a browser. For a more reliable local preview, use VS Code with the Live Server extension.
+### Photography folder: `images/photography/`
+- `hero.jpg` — wide hero image
+- `photo-01.jpg` through `photo-08.jpg` — gallery photos
+- `about.jpg` — optional portrait for the About section
 
-## Replace images
-Put your own image files in the `images` folder and keep the filenames used in the HTML, or update the matching `src`, `data-full`, and placeholder text in `index.html`.
+### Social cover folder: `images/social/`
+- `ig-01.jpg`, `ig-02.jpg`, `ig-03.jpg`
+- `tt-01.jpg`, `tt-02.jpg`, `tt-03.jpg`
 
-Suggested image names:
-- `hero.jpg` — main photography hero
-- `event-01.jpg`, `event-02.jpg`, `concert-01.jpg`, `portrait-01.jpg`, `editorial-01.jpg` — photography gallery
-- `about.jpg` — about portrait
-- `model-01.jpg`, `model-02.jpg`, `model-03.jpg` — modeling portfolio
-- `ig-01.jpg`, `ig-02.jpg`, `ig-03.jpg` — Instagram Reel covers
-- `tt-01.jpg`, `tt-02.jpg`, `tt-03.jpg` — TikTok covers
-- `case-study.jpg` — case study feature image
+For social covers, save a screenshot or image of the chosen Reel/TikTok cover and crop it vertically (4:5 is a good target). The site intentionally has no visible “ADD PHOTO” or file-path placeholders. Until real image files are added, the background blocks remain neutral rather than displaying instructions over your images.
 
-The site will show neutral image placeholders until you add files. JPG, PNG, and WebP are all fine; update the filename extension in the HTML if needed.
+## Publish to GitHub Pages
+1. Download and unzip this package.
+2. Add your photo and cover images to the folders above.
+3. Open your existing GitHub repository.
+4. Upload/replace `index.html`, `style.css`, `script.js`, `media-kit.html`, `media-kit.pdf`, `README.md`, and the `images` folder.
+5. Commit the changes and wait for GitHub Pages to redeploy.
+6. Visit your site and test the navigation, photo lightbox, social links, LinkedIn, and media-kit PDF.
 
-## Update social links
-In `index.html`, search for `https://www.instagram.com/` and `https://www.tiktok.com/` and replace each with your real profile or individual post URL. Replace the placeholder video headlines and case study copy with your own content.
+## Notes about view counts and covers
+The six featured video view counts are the figures supplied by Nicole and are displayed as static text. The media-kit page and PDF now include the updated TikTok 90-day analytics (Jul 28–Oct 25, 2026), the separate Oct 19–25 new-viewer figure, and the supplied Instagram 90-day metrics. This static GitHub Pages version does not automatically refresh counts or fetch covers from Instagram/TikTok. Analytics screenshots are included under `images/analytics/` and linked only from the media-kit page. Live updates require supported, authorized platform APIs plus a secure backend or scheduled service. Do not put API secrets in this public repository.
 
-## Change colors
-At the top of `style.css`, edit the CSS variables in `:root`:
-- `--black`
-- `--cream`
-- `--stone`
-- `--charcoal`
+## Included social cards
+- Instagram Reel — 2,981 views
+- Instagram Reel — 8,971 views
+- Instagram Reel — 60.7K views
+- TikTok — 24.6K views
+- TikTok — 381.8K views
+- TikTok — 60.6K views
 
-## Publish free with GitHub Pages
-1. Create or sign in to GitHub.
-2. Create a new public repository, for example `nicole-tran-portfolio`.
-3. Upload `index.html`, `style.css`, `script.js`, `README.md`, and the whole `images` folder.
-4. Open the repository's **Settings → Pages**.
-5. Under **Build and deployment**, select **Deploy from a branch**.
-6. Select branch `main` and folder `/ (root)`, then save.
-7. After GitHub Pages finishes publishing, it will show your website URL in the Pages settings.
 
-Every time you commit changes to the repository, GitHub Pages will publish the updates automatically.
-
-## Notes
-- The site uses Google Fonts when online and falls back to Georgia/Arial if the fonts are unavailable.
-- Social links are placeholders until you replace them.
-- Use optimized images for fast loading. A width around 1600–2200px is usually plenty for large portfolio images.
+## Latest analytics included
+- TikTok (Jul 28–Oct 25, 2026): 1.2M post views, 8.5K profile views, 172K likes, 14.3K comments, 21.9K shares.
+- TikTok new viewers (Oct 19–25, 2026): 18.5K; total viewers 26.3K.
+- Instagram (supplied 90-day dashboard): 1,049,139 views, 1,481 followers, +1,255 net followers.
+- Audience snapshots are labelled by platform and metric period to avoid implying the reporting windows are identical.
