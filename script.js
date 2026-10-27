@@ -13,7 +13,37 @@ siteNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', ()
 }));
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-const photoCards = [...document.querySelectorAll('.photo-card')];
+const allPhotoCards = [...document.querySelectorAll('.photo-card')];
+const galleryPageSize = 8;
+let galleryPage = 0;
+const galleryPrev = document.querySelector('#gallery-prev');
+const galleryNext = document.querySelector('#gallery-next');
+const galleryPageLabel = document.querySelector('#gallery-page-label');
+
+function updateGalleryPage() {
+  const totalPages = Math.max(1, Math.ceil(allPhotoCards.length / galleryPageSize));
+  galleryPage = Math.min(Math.max(galleryPage, 0), totalPages - 1);
+  allPhotoCards.forEach((card, index) => {
+    card.hidden = index < galleryPage * galleryPageSize || index >= (galleryPage + 1) * galleryPageSize;
+  });
+  if (galleryPageLabel) galleryPageLabel.textContent = `${galleryPage + 1} / ${totalPages}`;
+  if (galleryPrev) galleryPrev.disabled = galleryPage === 0;
+  if (galleryNext) galleryNext.disabled = galleryPage >= totalPages - 1;
+}
+galleryPrev?.addEventListener('click', () => {
+  galleryPage -= 1;
+  updateGalleryPage();
+  document.querySelector('#photography')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+galleryNext?.addEventListener('click', () => {
+  galleryPage += 1;
+  updateGalleryPage();
+  document.querySelector('#photography')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+updateGalleryPage();
+
+// Lightbox arrows navigate through every gallery photo, including later pages.
+const photoCards = allPhotoCards;
 const lightbox = document.querySelector('.lightbox');
 const lightboxImg = lightbox?.querySelector('img');
 const lightboxCaption = lightbox?.querySelector('figcaption');
