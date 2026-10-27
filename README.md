@@ -1,14 +1,14 @@
-[README.md](https://github.com/user-attachments/files/34052378/README.md)
+[README.md](https://github.com/user-attachments/files/34052596/README.md)
 # Nicole Tran portfolio — replacement website files
 
 This is a clean, responsive static website for GitHub Pages. It includes a homepage, photography grid, featured social video cards with supplied view counts, LinkedIn links, and a separate media-kit page with a PDF download.
 
 ## Important: add your image files
-The ZIP you supplied contained only HTML, CSS, JavaScript, and README files; it did not contain the photos. The code therefore references the image filenames below. Add your real images to these folders using the exact filenames, or change the paths in `index.html`.
+The ZIP you supplied contained only HTML, CSS, JavaScript, and README files; it did not contain the photos. The code therefore references the image filenames below. Use the exact names and extensions; file names are case-sensitive on GitHub Pages. Add your real images to these folders using the exact filenames, or change the paths in `index.html`.
 
 ### Photography folder: `images/photography/`
 - `hero.jpg` — wide hero image
-- `photo-01.jpg` through `photo-08.jpg` — gallery photos
+- `photo-01.jpg` through `photo-24.jpg` — gallery photos. The gallery shows 8 photos per page with previous/next arrows.
 - `about.jpg` — optional portrait for the About section
 
 ### Social cover folder: `images/social/`
@@ -42,3 +42,7 @@ The six featured video view counts are the figures supplied by Nicole and are di
 - TikTok new viewers (Oct 19–25, 2026): 18.5K; total viewers 26.3K.
 - Instagram (supplied 90-day dashboard): 1,049,139 views, 1,481 followers, +1,255 net followers.
 - Audience snapshots are labelled by platform and metric period to avoid implying the reporting windows are identical.
+
+
+## Gallery navigation
+The photography grid now has previous/next arrows and displays 8 images per set. Add up to 24 photos as `photo-01.jpg` through `photo-24.jpg` inside `images/photography/`. The full-screen photo viewer also keeps its own previous/next arrows.
