@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/34052596/README.md)
+[README.md](https://github.com/user-attachments/files/34052756/README.md)
 # Nicole Tran portfolio — replacement website files
 
 This is a clean, responsive static website for GitHub Pages. It includes a homepage, photography grid, featured social video cards with supplied view counts, LinkedIn links, and a separate media-kit page with a PDF download.
@@ -46,3 +46,7 @@ The six featured video view counts are the figures supplied by Nicole and are di
 
 ## Gallery navigation
 The photography grid now has previous/next arrows and displays 8 images per set. Add up to 24 photos as `photo-01.jpg` through `photo-24.jpg` inside `images/photography/`. The full-screen photo viewer also keeps its own previous/next arrows.
+
+
+## Modeling portfolio
+The main navigation on the homepage and media-kit page links to Nicole's external SCE/Syngency modeling portfolio and opens it in a new tab: https://sce.syngency.com/divisions/m/portfolios/nicole-t
