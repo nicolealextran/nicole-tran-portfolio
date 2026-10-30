@@ -1175,3 +1175,71 @@ a:focus-visible,
 button:focus-visible {
   outline-color: #D88BA2;
 }
+
+/* ==========================================
+   NICOLE TRAN — SPARKLING PINK STAR CURSOR
+   ========================================== */
+
+/* Keep the custom star cursor */
+body {
+  cursor: none;
+}
+
+a, button, .photo-card, .gallery-arrow,
+.menu-toggle, .service-cta {
+  cursor: none;
+}
+
+/* Main pink star */
+#pink-star-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  color: #E7A0B3;
+  font-size: 25px;
+  line-height: 1;
+  text-shadow: 0 0 7px rgba(231, 160, 179, .45);
+}
+
+/* Small sparkle particles */
+.cursor-sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99998;
+  color: #D88BA2;
+  font-size: 12px;
+  line-height: 1;
+  animation: sparkle-fade .8s ease-out forwards;
+}
+
+@keyframes sparkle-fade {
+  0% {
+    opacity: 0;
+    transform: scale(.3) rotate(0deg);
+  }
+  25% {
+    opacity: .9;
+    transform: scale(1) rotate(45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(.2) rotate(100deg) translateY(-12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #pink-star-cursor,
+  .cursor-sparkle {
+    display: none !important;
+  }
+
+  body, a, button, .photo-card,
+  .gallery-arrow, .menu-toggle, .service-cta {
+    cursor: auto !important;
+  }
+}
