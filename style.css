@@ -733,3 +733,208 @@ h2 em {
     transition-duration: .01ms !important;
   }
 }
+
+/* ==========================================
+   NICOLE TRAN — EDITORIAL PORTFOLIO UPDATE
+   ========================================== */
+
+/* Typography */
+
+:root {
+  --serif: 'Newsreader', Georgia, serif;
+  --sans: 'Archivo', Arial, sans-serif;
+}
+
+/* Hero buttons */
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.2rem;
+}
+
+.hero-bottom {
+  align-items: flex-end;
+}
+
+/* Services section */
+
+.services-section {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.service-list {
+  margin-top: 3rem;
+  border-top: 1px solid #d4cdc1;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 55px minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #d4cdc1;
+}
+
+.service-number {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  color: var(--muted);
+}
+
+.service-copy h3 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -.045em;
+  line-height: 1.05;
+  margin: .5rem 0 .8rem;
+}
+
+.service-copy h3 em {
+  font-weight: 400;
+}
+
+.service-copy > p:last-child {
+  max-width: 580px;
+  color: #625d54;
+  line-height: 1.8;
+  font-size: .9rem;
+}
+
+.service-cta {
+  font-family: var(--sans);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: .5rem;
+  white-space: nowrap;
+}
+
+.service-cta:hover {
+  opacity: .55;
+}
+
+.services-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.services-bottom p {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+/* Contact */
+
+.contact-email-small {
+  display: block;
+  margin-top: 1rem;
+  font-family: var(--sans);
+  font-size: .85rem;
+  letter-spacing: .03em;
+}
+
+/* Fix photo 01 crop */
+
+.photo-card[data-photo-number="01"] img {
+  object-fit: contain;
+  object-position: center;
+  background: var(--paper);
+}
+
+/* Fix first TikTok cover framing */
+
+.video-card img[src*="tt-01.jpg"] {
+  object-fit: cover;
+  object-position: center 12%;
+}
+
+/* Make service links feel interactive */
+
+.service-item {
+  transition: background .25s ease;
+}
+
+.service-item:hover .service-number {
+  color: var(--ink);
+}
+
+.service-item:hover .service-cta {
+  opacity: .55;
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 800px) {
+
+  .service-item {
+    grid-template-columns: 35px 1fr;
+    gap: 1rem;
+  }
+
+  .service-cta {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: .5rem;
+  }
+
+  .services-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .services-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .service-item {
+    padding: 1.8rem 0;
+  }
+
+  .service-copy h3 {
+    font-size: 2.1rem;
+  }
+
+  .service-copy > p:last-child {
+    font-size: .85rem;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    margin-top: 1.5rem;
+  }
+
+  .hero-bottom {
+    align-items: flex-start;
+  }
+
+  .services-bottom p {
+    font-size: 1.25rem;
+  }
+
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .service-item {
+    transition: none;
+  }
+
+}
